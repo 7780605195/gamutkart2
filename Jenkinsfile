@@ -26,9 +26,9 @@ pipeline {
 			}
 		}
 		stage('Deployment') {
-	    	steps {
-				sh 'sshpass -p "gamut" scp target/gamutkart.war gamut@172.17.0.3:/home/gamut/Distros/apache-tomcat-8.5.38/webapps'
-				sh 'sshpass -p "gamut" ssh gamut@172.17.0.3 "JAVA_HOME=/home/gamut/Distros/jdk1.8.0_151" "/home/gamut/Distros/apache-tomcat-8.5.38/bin/startup.sh"'
+	    	steps
+				sh 'sshpass -p "roopa" scp target/gamutkart.war roopa@172.17.0.2:/software/apache-tomcat-/webapps'
+				sh 'sshpass -p "roopa" ssh roopa@172.17.0.2 "JAVA_HOME=software/jdk1.8.0_211" "software/apache-tomcat-8.5.43/bin/startup.sh"'
 	    	}
 		}
     }
