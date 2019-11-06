@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-	tools {
+	tTools {
 		maven 'maven3.6'
 	}
 
