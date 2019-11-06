@@ -28,7 +28,7 @@ pipeline {
 		stage('Deployment') {
 	    	steps {
 				sh 'sshpass -p "roopa" scp target/gamutkart.war roopa@172.17.0.2:/software/apache-tomcat-8.5.43/webapps'
-				sh 'sshpass -p "roopa" ssh roopa@172.17.0.2 "JAVA_HOME=/software/jdk1.8.0_211" "/software/apache-tomcat-8.5.43/bin/startup.sh"'
+				//sh 'sshpass -p "roopa" ssh roopa@172.17.0.2 "JAVA_HOME=/software/jdk1.8.0_211" "/software/apache-tomcat-8.5.43/bin/startup.sh"'
 	    	}
 		}
     }
